@@ -19,12 +19,18 @@ const TopBar = () => {
 
         <TouchableOpacity style={styles.reportButton}>
           <Text style={styles.reportText}> Report</Text>
-          <Icon name="file" size={16} color="#2f4f4f" />
+          <Image
+          source={require('../img/docu.png')} 
+          style={styles.docu}
+          />
         </TouchableOpacity>
 
         <View style={styles.profileContainer}>
           <View style={styles.avatar}>
-            <Icon name="user" size={16} color="#2f4f4f" />
+            <Image
+            source={require('../img/profile.png')} 
+            style={styles.profile}
+            />
           </View>
           <View style={styles.profileText}>
             <Text style={styles.name}>Sirius Black</Text>
@@ -81,19 +87,25 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#fff',
-    borderRadius: 20,
+    borderRadius: 40,
     paddingHorizontal: 12,
-    paddingVertical: 6,
+    paddingVertical: 10,
     borderWidth: 1.2,
     borderColor: '#13602A',
     marginRight: 10,
   },
 
   reportText: {
-    fontSize: 17,
+    fontSize: 18,
     fontWeight: 'bold',
     color: '#13602A',
-    marginRight: 10,
+    marginRight: 6,
+  },
+
+  docu: {
+    width: 25,
+    height: 25,
+    resizeMode: 'contain',
   },
 
   profileContainer: {
@@ -104,7 +116,7 @@ const styles = StyleSheet.create({
     borderWidth: 1.2,
     borderColor: '#13602A',
     paddingHorizontal: 12,
-    paddingVertical: 6,
+    paddingVertical: 2,
   },
 
   avatar: {
@@ -118,6 +130,12 @@ const styles = StyleSheet.create({
 
   profileText: {
     justifyContent: 'center',
+  },
+
+  profile: {
+    width: 30,
+    height: 30,
+    resizeMode: 'cover',
   },
 
   name: {
