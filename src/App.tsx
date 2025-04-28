@@ -1,20 +1,29 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, View } from 'react-native';
-import HomeScreen from '../src/screens/HomeScreen.tsx';
-<<<<<<< HEAD
-import ReportScreen from '../src/screens/ReportScreen.tsx';
-=======
->>>>>>> 69956b9fe80bf0150b571a024aabb607d35ccf34
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from '../src/screens/HomeScreen';
+import ReportScreen from '../src/screens/ReportScreen';
+import { RootStackParamList } from './navtypes.tsx'; // import types
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const App: React.FC = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <HomeScreen />
-<<<<<<< HEAD
-      {/* <ReportScreen /> */}
-=======
->>>>>>> 69956b9fe80bf0150b571a024aabb607d35ccf34
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ headerShown: false }} 
+        />
+        <Stack.Screen
+          name="Report"
+          component={ReportScreen}
+          options={{ headerShown: false }} 
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

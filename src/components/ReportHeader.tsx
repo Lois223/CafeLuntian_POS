@@ -1,8 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../navtypes';
+
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 const ReportHeader = () => {
+  const navigation = useNavigation<NavigationProp>();
+
   return (
     <View style={styles.container}>
       <View style={styles.leftSection}>
@@ -11,11 +17,14 @@ const ReportHeader = () => {
       </View>
 
       <View style={styles.rightSection}>
-        <TouchableOpacity style={styles.posButton}>
+        <TouchableOpacity
+          style={styles.posButton}
+          onPress={() => navigation.navigate('Home')} 
+        >
           <Text style={styles.posText}>POS</Text>
           <Image
-              source={require('../img/shopbag.png')}
-              style={styles.shopbag}
+            source={require('../img/shopbag.png')}
+            style={styles.shopbag}
           />
         </TouchableOpacity>
 
