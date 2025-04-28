@@ -7,9 +7,9 @@ type Props = {
 };
 
 const categoryMap: Record<string, string[]> = {
-  Coffee: ['Hotdrinks', 'Iced Coffee', 'Iced Non-Coffee', 'Frappe'],
-  Refreshers: ['Fruit Tea', 'Iced Tea'],
-  Snacks: ['Pastries', 'Savory Bites'],
+  HotDrinks: ['Hot Coffee', 'Hot Non-Coffee'],
+  IcedDrinks: ['Iced Coffee', 'Iced Non-Coffee'],
+  Frappe: ['Frappe'],
 };
 
 const CategoryTabs: React.FC<Props> = ({ selectedGroup, setSelectedCategory }) => {
@@ -53,10 +53,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'flex-start',
-    gap: 10,
+    gap: 8,
     paddingHorizontal: 30,
     paddingBottom: 10,
-    marginTop: 10,
+    marginTop: 1,
   },
 
   tab: {

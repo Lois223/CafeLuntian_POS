@@ -14,22 +14,39 @@ type Props = {
   onAddToOrder: (product: Product, quantity: number) => void; 
 };
 
+
 const productData: Record<string, Product[]> = {
-  Hotdrinks: [
-    { id: 1, name: 'Americano', price: 99, image: require('../img/cappuccino.png'), category: 'Hotdrinks' },
-    { id: 2, name: 'Latte', price: 99, image: require('../img/cappuccino.png'), category: 'Hotdrinks' },
-    { id: 3, name: 'Americano', price: 99, image: require('../img/cappuccino.png'), category: 'Hotdrinks' },
-    { id: 4, name: 'Latte', price: 99, image: require('../img/cappuccino.png'), category: 'Hotdrinks' },
-    { id: 5, name: 'Americano', price: 99, image: require('../img/cappuccino.png'), category: 'Hotdrinks' },
-    { id: 6, name: 'Latte', price: 99, image: require('../img/cappuccino.png'), category: 'Hotdrinks' },
-    { id: 7, name: 'Americano', price: 99, image: require('../img/cappuccino.png'), category: 'Hotdrinks' },
-    { id: 8, name: 'Latte', price: 99, image: require('../img/cappuccino.png'), category: 'Hotdrinks' },
+  'Hot Coffee': [
+    { id: 1, name: 'Caramel Machiatto', price: 99, image: require('../img/cappuccino.png'), category: 'Hot Coffee' },
+    { id: 2, name: 'Mocha', price: 99, image: require('../img/cappuccino.png'), category: 'Hot Coffee' },
+    { id: 3, name: 'Spanish Latte', price: 99, image: require('../img/cappuccino.png'), category: 'Hot Coffee' },
+    { id: 4, name: 'Salted Caramel', price: 99, image: require('../img/cappuccino.png'), category: 'Hot Coffee' },
+    { id: 5, name: 'Americano', price: 99, image: require('../img/cappuccino.png'), category: 'Hot Coffee' },
+    { id: 6, name: 'Cafe Latte', price: 99, image: require('../img/cappuccino.png'), category: 'Hot Coffee' },
+  ],
+  'Hot Non-Coffee': [
+    { id: 7, name: 'Caramel', price: 99, image: require('../img/cappuccino.png'), category: 'Hot Non-Coffee' },
+    { id: 8, name: 'Chocolate', price: 99, image: require('../img/cappuccino.png'), category: 'Hot Non-Coffee' },
+    { id: 9, name: 'Hazel Nut', price: 99, image: require('../img/cappuccino.png'), category: 'Hot Non-Coffee' },
+    { id: 10, name: 'Salted Caramel', price: 99, image: require('../img/cappuccino.png'), category: 'Hot Non-Coffee' },
   ],
   'Iced Coffee': [
-    { id: 9, name: 'Iced Americano', price: 99, image: require('../img/cappuccino.png'), category: 'Iced Coffee' },
-    { id: 10, name: 'Iced Latte', price: 99, image: require('../img/cappuccino.png'), category: 'Iced Coffee' },
-    { id: 11, name: 'Iced Americano', price: 99, image: require('../img/cappuccino.png'), category: 'Iced Coffee' },
-    { id: 12, name: 'Iced Latte', price: 99, image: require('../img/cappuccino.png'), category: 'Iced Coffee' },
+    { id: 11, name: 'Caramel Machiatto', price: 129, image: require('../img/cappuccino.png'), category: 'Iced Coffee' },
+    { id: 12, name: 'Mocha', price: 129, image: require('../img/cappuccino.png'), category: 'Iced Coffee' },
+    { id: 13, name: 'Spanish Latte', price: 129, image: require('../img/cappuccino.png'), category: 'Iced Coffee' },
+    { id: 14, name: 'Salted Caramel', price: 129, image: require('../img/cappuccino.png'), category: 'Iced Coffee' },
+    { id: 15, name: 'Americano', price: 129, image: require('../img/cappuccino.png'), category: 'Iced Coffee' },
+  ],
+  'Iced Non-Coffee': [
+    { id: 16, name: 'Caramel', price: 129, image: require('../img/cappuccino.png'), category: 'Iced Non-Coffee' },
+    { id: 17, name: 'Chocolate', price: 129, image: require('../img/cappuccino.png'), category: 'Iced Non-Coffee' },
+    { id: 18, name: 'Hazel Nut', price: 129, image: require('../img/cappuccino.png'), category: 'Iced Non-Coffee' },
+    { id: 19, name: 'Salted Caramel', price: 129, image: require('../img/cappuccino.png'), category: 'Iced Non-Coffee' },
+  ],
+  'Frappe': [
+    { id: 20, name: 'Dark Chocolate', price: 149, image: require('../img/cappuccino.png'), category: 'Frappe' },
+    { id: 21, name: 'Salted Caramel', price: 149, image: require('../img/cappuccino.png'), category: 'Frappe' },
+    { id: 22, name: 'Java Chip', price: 149, image: require('../img/cappuccino.png'), category: 'Frappe' },
   ],
 };
 
@@ -68,7 +85,7 @@ const styles = StyleSheet.create({
   productGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    gap: 7,
     marginLeft: 35,
   },
 

@@ -8,14 +8,14 @@ import OrderSummary from '../components/OrderSummary.tsx';
 import { Product } from '../components/ProductList.tsx'; // Import the Product type
 
 const HomeScreen: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('Hotdrinks');
+  const [selectedCategory, setSelectedCategory] = useState('HotDrinks');
   const [orderList, setOrderList] = useState<{ item: string; price: number; category: string; quantity: number; }[]>([]);
 
   // Update the addItemToOrder function to match the expected signature
   const addItemToOrder = (product: Product, quantity: number) => {
     setOrderList((prevList) => [
       ...prevList,
-      { item: product.name, price: product.price, category: product.category, quantity }, // Add category here
+      { item: product.name, price: product.price, category: product.category, quantity }, 
     ]);
   };
 
@@ -43,19 +43,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFFDF3',
-    padding: 20,
+    padding: 10,
   },
 
   mainContent: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingVertical: 10,
+    paddingVertical: 5,
   },
 
   leftSection: {
     flex: 1,
-    paddingRight: 20,
+    paddingRight: 15,
   },
 
   productListContainer: {
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
 
   rightSection: {
     flex: 1,
-    paddingLeft: 20,
+    paddingLeft: 10,
   },
 });
 

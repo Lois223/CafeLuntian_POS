@@ -7,21 +7,21 @@ type Props = {
 };
 
 const ItemStatus: React.FC<Props> = ({ setSelectedCategory }) => {
-  const [selectedItem, setSelectedItem] = useState('Coffee');
+   const [selectedItem, setSelectedItem] = useState('HotDrinks');
 
   const items = [
-    { label: 'Coffee', count: 50 },
-    { label: 'Refreshers', count: 20 },
-    { label: 'Snacks', count: 30 },
+    { label: 'HotDrinks', count: 50 },
+    { label: 'IcedDrinks', count: 20 },
+    { label: 'Frappe', count: 20 },
   ];
 
   useEffect(() => {
-    // Automatically select the first category under the selected item group
     const defaultCategoryMap: Record<string, string[]> = {
-      Coffee: ['Hotdrinks', 'Iced Coffee', 'Iced Non-Coffee', 'Frappe'],
-      Refreshers: ['Fruit Tea', 'Iced Tea'],
-      Snacks: ['Pastries', 'Savory Bites'],
+      HotDrinks: ['Hot Coffee', 'Hot Non-Coffee'],
+      IcedDrinks: ['Iced Coffee', 'Iced Non-Coffee'],
+      Frappe: ['Frappe'],
     };
+
 
     const firstCategory = defaultCategoryMap[selectedItem]?.[0];
     if (firstCategory) {
@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
   },
 
   boxContainer: {
-    width: 220,
-    height: 120,
+    width: 190,
+    height: 100,
     backgroundColor: '#FFF',
     borderWidth: 1.2,
     borderColor: '#13602A',
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   },
 
   info: {
-    marginTop: 30,
+    marginTop: 14,
     alignItems: 'flex-start',
   },
 
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
 
   name: {
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 14,
     color: '#13602A',
   },
 

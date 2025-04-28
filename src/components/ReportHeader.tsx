@@ -1,33 +1,29 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-const TopBar = () => {
+const ReportHeader = () => {
   return (
     <View style={styles.container}>
       <View style={styles.leftSection}>
-        <Image
-          source={require('../img/logo.png')} 
-          style={styles.logo}
-        />
-        <Text style={styles.date}>Monday, 30 March</Text>
+        <Image source={require('../img/logo.png')} style={styles.logo} />
+        <Text style={styles.title}>Cafe Luntian</Text>
       </View>
 
       <View style={styles.rightSection}>
-        <Text style={styles.orderText}>Total Order: <Text>20</Text></Text>
-
-        <TouchableOpacity style={styles.reportButton}>
-          <Text style={styles.reportText}> Report</Text>
+        <TouchableOpacity style={styles.posButton}>
+          <Text style={styles.posText}>POS</Text>
           <Image
-          source={require('../img/docu.png')} 
-          style={styles.docu}
+              source={require('../img/shopbag.png')}
+              style={styles.shopbag}
           />
         </TouchableOpacity>
 
         <View style={styles.profileContainer}>
           <View style={styles.avatar}>
             <Image
-            source={require('../img/profile.png')} 
-            style={styles.profile}
+              source={require('../img/profile.png')}
+              style={styles.profile}
             />
           </View>
           <View style={styles.profileText}>
@@ -45,7 +41,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    backgroundColor: '#1b4d1f',
     paddingHorizontal: 25,
+    paddingVertical: 16,
   },
 
   leftSection: {
@@ -54,54 +52,46 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    width: 60,
+    width: 50,
     height: 50,
     marginRight: 10,
-    resizeMode: 'contain',
   },
 
-  date: {
-    fontSize: 16,
+  title: {
+    color: '#fff',
+    fontSize: 30,
     fontWeight: 'bold',
-    color: '#13602A',
   },
 
   rightSection: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 5,
+    gap: 10,
   },
 
-  orderText: {
-    fontSize: 16,
-    color: '#13602A',
-    marginRight: 5,
-    fontWeight: 'bold',
-  },
-
-  reportButton: {
+  posButton: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#fff',
     borderRadius: 40,
-    paddingHorizontal: 12,
-    paddingVertical: 5,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
     borderWidth: 1.2,
     borderColor: '#13602A',
     marginRight: 10,
   },
 
-  reportText: {
-    fontSize: 16,
+  posText: {
+    fontSize: 18,
     fontWeight: 'bold',
     color: '#13602A',
     marginRight: 6,
   },
-
-  docu: {
-    width: 25,
-    height: 25,
-    resizeMode: 'contain',
+  
+  shopbag: {
+    width: 20,
+    height: 20,
+    resizeMode: 'cover',
   },
 
   profileContainer: {
@@ -111,7 +101,8 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     borderWidth: 1.2,
     borderColor: '#13602A',
-    paddingHorizontal: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 2,
   },
 
   avatar: {
@@ -120,7 +111,6 @@ const styles = StyleSheet.create({
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: 5,
   },
 
   profileText: {
@@ -130,11 +120,12 @@ const styles = StyleSheet.create({
   profile: {
     width: 30,
     height: 30,
+    marginLeft: -10,
     resizeMode: 'cover',
   },
 
   name: {
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: 'bold',
     color: '#13602A',
   },
@@ -145,4 +136,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TopBar;
+export default ReportHeader;

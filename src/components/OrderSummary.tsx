@@ -169,17 +169,16 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     paddingHorizontal: 30,
     backgroundColor: '#fff',
-    flex: 1,
-    borderRadius: 25,
+    borderRadius: 20,
     borderWidth: 1.2,
     borderColor: '#13602A',
-    width: '80%',
+    width: '77%',
+    height: 545,
     marginLeft: 100,
   },
 
   receiptContainer: {
-    marginTop: 10,
-    marginBottom: 10,
+    marginBottom: 5,
   },
 
   receiptTitle: {
@@ -198,21 +197,22 @@ const styles = StyleSheet.create({
   orderTypeContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginVertical: 10,
+    marginVertical: 5,
     borderRadius: 30,
     borderWidth: 1.2,
     borderColor: '#13602A',
   },
 
   orderTypeButton: {
-    paddingVertical: 10,
-    paddingHorizontal: 40,
+    paddingVertical: 8,
+    paddingHorizontal: 20,
     borderRadius: 30,
     alignItems: 'center',
   },
 
   selectedOrderTypeButton: {
     backgroundColor: '#13602A',
+    paddingHorizontal: 30,
   },
 
   selectedOrderTypeText: {
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
 
   orderTypeText: {
     color: '#13602A',
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: 'bold',
   },
 
@@ -229,7 +229,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 5,
-    marginTop: 10,
   },
 
   inputContainer: {
@@ -243,6 +242,7 @@ const styles = StyleSheet.create({
     borderWidth: 1.2,
     borderColor: '#13602A',
     padding: 5,
+    fontSize: 13,
   },
 
   discountContainer: {
@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
   
   discountButton: {
     paddingVertical: 5,
-    paddingHorizontal: 20,
+    paddingHorizontal: 13,
     backgroundColor: '#fff',
     borderRadius: 30,
     borderWidth: 1.2,
@@ -274,7 +274,7 @@ const styles = StyleSheet.create({
   
   discountText: {
     color: '#13602A',
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: 'bold',
   },
   
@@ -285,14 +285,14 @@ const styles = StyleSheet.create({
   discountRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingVertical: 5,
+    paddingVertical: 2,
     borderBottomWidth: 1, 
     borderBottomColor: '#ddd', 
   },  
 
   orderListContainer: {
     marginBottom: 10,
-    maxHeight: 500,
+    maxHeight: 400,
     borderRadius: 30,
     borderWidth: 1.2,
     borderColor: '#13602A',
@@ -303,6 +303,7 @@ const styles = StyleSheet.create({
     fontWeight: 500,
     marginBottom: 10,
     color: '#8a8888',
+    fontSize: 12.5,
   },
 
   orderItem: {
@@ -318,7 +319,7 @@ const styles = StyleSheet.create({
 
   itemDetails: {
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: 13,
     color: '#13602A',
   },
 
@@ -335,13 +336,13 @@ const styles = StyleSheet.create({
   },
 
   quantityButtonText: {
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: 'bold',
     color: '#13602A',
   },
 
   quantityText: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: 'bold',
     marginHorizontal: 10,
     color: '#13602A',
@@ -353,7 +354,7 @@ const styles = StyleSheet.create({
   },
 
   priceText: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: 'bold',
     color: '#13602A',
   },
@@ -365,7 +366,7 @@ const styles = StyleSheet.create({
   },
 
   paymentDetailsContainer: {
-    marginBottom: 20,
+    marginBottom: 10,
   },
 
   rowContainer: {
@@ -376,25 +377,26 @@ const styles = StyleSheet.create({
   leftText: {
     color: '#595959',
     fontWeight: 500,
-    fontSize: 14,
+    fontSize: 13,
   },
 
   rightText: {
     color: '#13602A',
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: 13,
   },
 
   placeOrderButton: {
     backgroundColor: '#13602A',
-    paddingVertical: 15,
+    paddingVertical: 10,
     borderRadius: 25,
     alignItems: 'center',
+    marginBottom: 10,
   },
 
   buttonText: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: 'bold',
   },
 });

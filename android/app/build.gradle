@@ -105,6 +105,7 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+
 }
 
 dependencies {
@@ -117,3 +118,12 @@ dependencies {
         implementation jscFlavor
     }
 }
+
+//// Workaround for Gradle 8+ CMake state-tracking issues with native builds
+//tasks.whenTaskAdded { task ->
+//    if (task.name.contains("buildCMakeDebug")) {
+//        task.doNotTrackState("Workaround for CMake state-tracking issue on ABI: ${task.name}")
+//    }
+//}
+
+
