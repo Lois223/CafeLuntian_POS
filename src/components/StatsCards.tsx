@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
   },
 
   card: {
-    width: '49%',
+    width: '49.4%',
     backgroundColor: '#fff',
     borderWidth: 1,
     borderColor: '#13602A',
     padding: 16,
     borderRadius: 8,
-    marginBottom: 3,
+    marginBottom: 5,
   },
 
   title: {

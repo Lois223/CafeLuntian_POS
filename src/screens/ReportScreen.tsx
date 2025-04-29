@@ -20,7 +20,10 @@ const ReportScreen = () => {
             <StatsCards />
           </View>
           <View style={styles.rightSection}>
+            <ScrollView>
             <RecentOrder />
+            </ScrollView>
+           
           </View>
         </View>
 

@@ -9,6 +9,9 @@ const InventoryTable = () => {
     { id: 'P001', name: 'Caramel Macchiato', category: 'Hot Drinks', price: '₱100', quantity: 20, status: 'Available' },
     { id: 'P002', name: 'Latte', category: 'Hot Drinks', price: '₱120', quantity: 0, status: 'Out of Stock' },
     { id: 'P003', name: 'Espresso', category: 'Hot Drinks', price: '₱90', quantity: 15, status: 'Available' },
+    { id: 'P001', name: 'Caramel Macchiato', category: 'Hot Drinks', price: '₱100', quantity: 20, status: 'Available' },
+    { id: 'P002', name: 'Latte', category: 'Hot Drinks', price: '₱120', quantity: 0, status: 'Out of Stock' },
+    { id: 'P003', name: 'Espresso', category: 'Hot Drinks', price: '₱90', quantity: 15, status: 'Available' },
   ];
 
   // Filter
@@ -152,7 +155,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: '#13602A',
     textAlign: 'left',
-    marginLeft: 30,
+    marginLeft: 23,
   },
 
   cell: {

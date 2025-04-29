@@ -12,7 +12,7 @@ const ReportHeader = () => {
   return (
     <View style={styles.container}>
       <View style={styles.leftSection}>
-        <Image source={require('../img/logo.png')} style={styles.logo} />
+        <Image source={require('../img/logo2.png')} style={styles.logo} />
         <Text style={styles.title}>Cafe Luntian</Text>
       </View>
 
